@@ -1372,6 +1372,9 @@ p {
   .text-center {
     font-size: 12px; /* Menyesuaikan ukuran teks untuk layar kecil */
   }
+  .footer-container {
+    flex-wrap: wrap; /* Mengizinkan elemen berpindah ke baris berikutnya */
+    justify-content: center; /* Memusat
 
   @keyframes infiniteslider {
     0% {
