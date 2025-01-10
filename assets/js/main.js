@@ -103,6 +103,57 @@ loginClose.addEventListener('click', () =>{
    login.classList.remove('show-login')
 })
 
+
+/*=============== Touch Slide ===============*/
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollContainer = document.querySelector('.scroll-container');
+
+  if (scrollContainer) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    scrollContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      scrollContainer.classList.add('active');
+      startX = e.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+    });
+
+    scrollContainer.addEventListener('mouseleave', () => {
+      isDown = false;
+      scrollContainer.classList.remove('active');
+    });
+
+    scrollContainer.addEventListener('mouseup', () => {
+      isDown = false;
+      scrollContainer.classList.remove('active');
+    });
+
+    scrollContainer.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - scrollContainer.offsetLeft;
+      const walk = (x - startX) * 2; // Kecepatan pengguliran
+      scrollContainer.scrollLeft = scrollLeft - walk;
+    });
+
+    // Sentuhan (untuk layar sentuh)
+    scrollContainer.addEventListener('touchstart', (e) => {
+      const touch = e.touches[0];
+      startX = touch.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+    });
+
+    scrollContainer.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0];
+      const x = touch.pageX - scrollContainer.offsetLeft;
+      const walk = (x - startX) * 2; // Kecepatan pengguliran
+      scrollContainer.scrollLeft = scrollLeft - walk;
+    });
+  }
+});
+
 /*=============== SLIDER WRAPPER ===============*/
 // Pilih elemen slider, tombol panah, dan wrapper scroll
 const scrollWrapper = document.getElementById('productCategories');
