@@ -1372,9 +1372,40 @@ p {
   .text-center {
     font-size: 12px; /* Menyesuaikan ukuran teks untuk layar kecil */
   }
-  .footer-container {
-    flex-wrap: wrap; /* Mengizinkan elemen berpindah ke baris berikutnya */
-    justify-content: center; /* Memusat
+    .footer-container {
+    flex-wrap: wrap; /* Membiarkan elemen berpindah ke baris berikutnya */
+    flex-direction: column; /* Mengatur elemen dalam arah vertikal */
+    align-items: flex-start; /* Menjaga elemen tetap rata kiri */
+    text-align: left; /* Menjamin teks tetap rata kiri */
+  }
+
+  .footer-column {
+    margin: 10px 0; /* Menambahkan jarak antar kolom */
+    width: 100%; /* Memberikan lebar penuh pada setiap kolom */
+    text-align: left; /* Teks tetap rata kiri */
+  }
+
+  .footer-header {
+    flex-direction: column; /* Mengatur elemen header menjadi kolom */
+    align-items: flex-start; /* Menjaga elemen tetap rata kiri */
+    gap: 10px; /* Menambahkan jarak antar elemen */
+    text-align: left; /* Teks tetap rata kiri */
+  }
+
+  .footer-header p {
+    flex: unset; /* Menonaktifkan pengaturan flex */
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    justify-content: flex-start; /* Menempatkan ikon di sisi kiri */
+  }
+
+  .footer-bottom {
+    margin-top: 20px; /* Menambah jarak di bagian bawah */
+    font-size: 14px; /* Menyesuaikan ukuran font untuk layar kecil */
+    text-align: left; /* Teks tetap rata kiri */
+  }
 
   @keyframes infiniteslider {
     0% {
