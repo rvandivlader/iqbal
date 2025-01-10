@@ -717,11 +717,13 @@ a {
   }
 
   .map-section h2 {
-    font-size: 24px; /* Ukuran font untuk judul map pada tampilan kecil */
+    font-size: 18px; /* Ukuran font untuk judul map pada tampilan kecil */
+    margin: 0;
   }
 
   .map-section p {
     font-size: 12px; /* Ukuran font untuk deskripsi map pada tampilan kecil */
+    margin: 10px;
   }
 
   .map {
