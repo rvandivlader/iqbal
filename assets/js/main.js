@@ -104,19 +104,34 @@ loginClose.addEventListener('click', () =>{
 })
 
 /*=============== SLIDER WRAPPER ===============*/
-const scrollLeftButton = document.getElementById('scrollLeftButton');
-const scrollRightButton = document.getElementById('scrollRightButton');
-const productCategories = document.getElementById('productCategories');
+// Pilih elemen slider, tombol panah, dan wrapper scroll
+const scrollWrapper = document.getElementById('productCategories');
+const leftArrow = document.getElementById('scrollLeftButton');
+const rightArrow = document.getElementById('scrollRightButton');
 
-scrollLeftButton.addEventListener('click', () => {
-    productCategories.scrollBy({ left: -200, behavior: 'smooth' });
+// Fungsi untuk menggulir ke kiri
+leftArrow.addEventListener('click', () => {
+  scrollWrapper.scrollBy({ left: -300, behavior: 'smooth' });
+  checkArrows(); // Periksa posisi scroll
 });
 
-scrollRightButton.addEventListener('click', () => {
-    productCategories.scrollBy({ left: 200, behavior: 'smooth' });
+// Fungsi untuk menggulir ke kanan
+rightArrow.addEventListener('click', () => {
+  scrollWrapper.scrollBy({ left: 300, behavior: 'smooth' });
+  checkArrows(); // Periksa posisi scroll
 });
 
-productCategories.addEventListener('scroll', () => {
-    scrollLeftButton.disabled = productCategories.scrollLeft === 0;
-    scrollRightButton.disabled = productCategories.scrollLeft + productCategories.clientWidth >= productCategories.scrollWidth;
-});
+// Periksa posisi scroll untuk mengatur status tombol
+function checkArrows() {
+  const maxScrollLeft = scrollWrapper.scrollWidth - scrollWrapper.clientWidth;
+
+  // Aktifkan atau nonaktifkan tombol jika sudah di posisi awal atau akhir
+  leftArrow.disabled = scrollWrapper.scrollLeft <= 0;
+  rightArrow.disabled = scrollWrapper.scrollLeft >= maxScrollLeft;
+}
+
+// Tambahkan event listener untuk scroll
+scrollWrapper.addEventListener('scroll', checkArrows);
+
+// Inisialisasi posisi tombol saat halaman dimuat
+checkArrows();
