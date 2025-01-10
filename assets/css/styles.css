@@ -717,13 +717,11 @@ a {
   }
 
   .map-section h2 {
-    font-size: 18px; /* Ukuran font untuk judul map pada tampilan kecil */
-    margin: 0;
+    font-size: 24px; /* Ukuran font untuk judul map pada tampilan kecil */
   }
 
   .map-section p {
     font-size: 12px; /* Ukuran font untuk deskripsi map pada tampilan kecil */
-    margin: 10px;
   }
 
   .map {
@@ -820,15 +818,15 @@ hr {
     flex-wrap: wrap;
     justify-content: center; /* Menyusun item di tengah secara horizontal */
     align-items: center; /* Menyusun item di tengah secara vertikal */
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     margin: 0;
   }
 
   .stat-item {
     flex: 1;
-    max-width: 32%;  /* Mengatur lebar elemen untuk 3 item dalam satu baris */
-    margin-bottom: 5px;
+    max-width: 50%;  /* Mengatur lebar elemen untuk 3 item dalam satu baris */
+    margin-bottom: 3px;
   }
 
   hr {
@@ -849,11 +847,13 @@ hr {
   }
 
   .map-section h2 {
-    font-size: 24px; /* Ukuran font untuk judul map pada tampilan kecil */
+    font-size: 18px; /* Ukuran font untuk judul map pada tampilan kecil */
+    margin: 0;
   }
 
   .map-section p {
     font-size: 12px; /* Ukuran font untuk deskripsi map pada tampilan kecil */
+    margin: 10px;
   }
 
   .map {
@@ -1374,7 +1374,8 @@ p {
   .text-center {
     font-size: 12px; /* Menyesuaikan ukuran teks untuk layar kecil */
   }
-    .footer-container {
+
+  .footer-container {
     flex-wrap: wrap; /* Membiarkan elemen berpindah ke baris berikutnya */
     flex-direction: column; /* Mengatur elemen dalam arah vertikal */
     align-items: flex-start; /* Menjaga elemen tetap rata kiri */
