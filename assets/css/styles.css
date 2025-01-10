@@ -659,6 +659,7 @@ a {
     width: 100%; /* Video tetap memenuhi lebar */
     height: auto; /* Tinggi video disesuaikan secara proporsional */
     object-fit: cover; /* Pertahankan tampilan penuh video */
+    margin-top: 20%;
   }
 
   .main-section {
