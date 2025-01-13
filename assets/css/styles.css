@@ -190,6 +190,13 @@ a {
   color: var(--first-color);
 }
 @media screen and (max-width: 1023px) {
+  .nav__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Sebarkan elemen di container */
+    width: 100%;
+  }
+  
   .nav__menu {
     background-color: var(--body-color);
     position: fixed;
@@ -214,20 +221,31 @@ a {
   .nav__actions {
     display: flex;
     align-items: center;
-    margin-left: auto;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: flex-end; /* Pastikan elemen berada di kanan */
+    gap: 1rem;
   }
-  .nav__search, 
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
+  .nav__logo-img {
+    width: 100px; /* Atur ukuran sesuai kebutuhan */
+    height: auto;
+  }
+  .nav__search,
   .nav__login {
-    position: relative;
     font-size: 1.25rem;
     color: var(--title-color);
     cursor: pointer;
-    transition: color 0.4s;
+    display: flex;
+    align-items: center;
   }
   .nav__toggle {
-    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin: 0;
   }
 }
 .nav__link {
