@@ -221,8 +221,7 @@ a {
   .nav__actions {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Pastikan elemen berada di kanan */
-    gap: 1rem;
+    justify-content: center;
   }
 
   .nav__logo {
@@ -236,12 +235,11 @@ a {
   }
   .nav__search,
   .nav__login {
-    font-size: 1.25rem;
     color: var(--title-color);
+    font-weight: var(--font-semi-bold);
     cursor: pointer;
     display: flex;
-    justify-items: center;
-    margin: 0 38px 0 0;
+    align-items: center;
   }
   .nav__toggle {
     display: flex;
