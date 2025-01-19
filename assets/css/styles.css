@@ -176,8 +176,19 @@ a {
   align-items: center;
   column-gap: 1rem;
 }
-.nav__search, 
-.nav__login, 
+.nav__login{
+  font-size: 1.25rem;
+  color: #fff;
+  background-color: #809A47;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.nav__login:hover {
+  background-color: #A5BD78;
+}
+
+.nav__search,
 .nav__toggle, 
 .nav__close {
   font-size: 1.25rem;
@@ -186,8 +197,8 @@ a {
   transition: color .4s;
 }
 
-:is(.nav__logo, .nav__search, .nav__login, .nav__toggle, .nav__link):hover {
-  color: var(--first-color);
+:is(.nav__logo, .nav__search, .nav__toggle, .nav__link):hover {
+  color: #A5BD78;
 }
 @media screen and (max-width: 1023px) {
   .nav__data {
@@ -222,6 +233,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
   }
 
   .nav__logo {
@@ -233,14 +245,27 @@ a {
     width: 100px; /* Atur ukuran sesuai kebutuhan */
     height: auto;
   }
-  .nav__search,
-  .nav__login {
+  .nav__search{
     color: var(--title-color);
     font-weight: var(--font-semi-bold);
     cursor: pointer;
     display: flex;
     align-items: center;
   }
+  .nav__login {
+    color: #fff;
+    font-weight: var(--font-semi-bold);
+    background-color: #809A47;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .nav__login:hover {
+    background-color: #A5BD78;
+  }
+
   .nav__toggle {
     display: flex;
     align-items: center;
