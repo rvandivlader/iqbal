@@ -989,7 +989,7 @@ hr {
 .sp {
   text-align: center;
   padding: 20px;
-  margin-top: 2%;
+  margin-top: 0;
   background-color: #fff;
 }
 
